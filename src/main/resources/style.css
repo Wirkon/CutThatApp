@@ -1,0 +1,117 @@
+.drop-zone {
+    -fx-border-style: solid;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+.drop-zone-normal {
+    -fx-border-color: linear-gradient(to top right, -gradient-base, #882A9B,-gradient-base, #9C1717);
+    -fx-background-color: #1e293b;
+}
+.drop-zone:drag-over{
+    -fx-border-color:#8a2be2;
+}
+.drop-zone-hover {
+    -fx-border-color: linear-gradient(to top right, #882A9B, -gradient-base, #9C1717);
+}
+.drop-zone-title {
+    -fx-text-fill: #f8fafc;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.drop-zone-subtitle {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 12px;
+}
+.drop-zone-codec-selector{
+    -fx-background-color: #1a1f2c;
+    -fx-border-color: #3f4756;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-border-width: 1;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-control-inner-background: #1a1f2c;
+}
+.drop-zone-codec-selector:hover {
+    -fx-border-color: #8a2be2;
+}
+.drop-zone-codec-selector > .cell,
+.drop-zone-codec-selector > .list-cell,
+.drop-zone-codec-selector:focused > .cell,
+.drop-zone-codec-selector:focused > .list-cell {
+    -fx-text-fill: #64748b;
+    -fx-background-color: transparent;
+    -fx-background-radius: 6 0 0 6;
+    -fx-padding: 4 10 4 12;
+}
+.drop-zone-codec-selector .list-view {
+    -fx-background-color: #1a1f2c;
+    -fx-border-color: #8a2be2;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+}
+.drop-zone-codec-selector .list-cell:selected,
+.drop-zone-codec-selector .list-cell:filled:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: #64748b;
+}
+
+
+.drop-zone-codec-selector .arrow-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.drop-zone-codec-selector .arrow {
+    -fx-background-color: #3f4756;
+}
+.drop-zone-codec-selector:hover .arrow {
+    -fx-background-color: #8a2be2;
+}
+
+.drop-zone-supported-file{
+    -fx-text-fill: #38bdf8;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+
+.drop-zone-unsupported-file{
+    -fx-text-fill: #ef4444;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.custom-title-bar{
+    -fx-background-color: #1e293b;
+    -fx-background-radius: 10px 10px 0px 0px;
+}
+
+.title-bar-text {
+    -fx-text-fill: #38bdf8;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.title-bar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #94a3b8;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+
+    -btn-hover-color: #334155;
+}
+
+.title-bar-button:hover {
+    -fx-background-color: -btn-hover-color;
+    -fx-text-fill: white;
+}
+.main-window {
+    -fx-background-color: #0f172a;
+    -fx-border-color: #1e293b;
+    -fx-border-width: 2px;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+}
+
