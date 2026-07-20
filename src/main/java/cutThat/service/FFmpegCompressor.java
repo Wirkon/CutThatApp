@@ -5,14 +5,12 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class FFmpegCompressor {
-    private static final String FFMPEG_PATH = Paths.get("bin","ffmpeg.exe").toAbsolutePath().toString();
 
     public interface ProgressListener{
         void onProgressUpdate(double progress, String timeRemaining);
@@ -72,14 +70,17 @@ public class FFmpegCompressor {
     }
 
     private static Process getProcess(File inputFile, File outputFile, String encoder) throws IOException {
-        File ffmpeg = new File(FFMPEG_PATH);
+        File ffmpeg = new File("bin/ffmpeg.exe");
+        if(!ffmpeg.exists()) {
+            ffmpeg = new File("app/bin/ffmpeg.exe");
+        }
         if (!ffmpeg.exists()) {
-            Logger.error("FFmpeg не найдет по пути: " + FFMPEG_PATH, new IOException());
+            Logger.error("FFmpeg не найдет по пути: " + ffmpeg.getAbsolutePath(), new IOException());
         }
 
 
         List<String> command = new ArrayList<>();
-        command.add(FFMPEG_PATH);
+        command.add(ffmpeg.getAbsolutePath());
         command.add("-y");
         command.add("-i");
         command.add(inputFile.getAbsolutePath());
