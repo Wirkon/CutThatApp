@@ -7,19 +7,23 @@
 
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/dd448d5e-cbba-4b99-91c4-66535548bea9" />
 
+## Релизы
+  -Свежие релизы утилиты можно найти в разделе Releases
+
+  -Для запуска нужно лишь распаковать архив и запустить exe.
 
 ## Требования для сборки
   -Java 21
-  
+    
   -Maven
-  
+    
   -FFMPEG
   
 ## Сборка и запуск
-  1.Клонируйте репозиторий:git clone [https://github.com/Wirkon/CutThatApp.git]
-  
-  2.Скачайте официальный сборщик FFmpeg и положите exe файл в корень проекта по пути /bin/ffmpeg.exe
-  
-  3.Соберите проект с помощью Maven
-  
-  mvn clean package
+    1.Клонируйте репозиторий:git clone [https://github.com/Wirkon/CutThatApp.git]
+    
+    2.Скачайте официальный сборщик FFmpeg и положите exe файл в корень проекта по пути /bin/ffmpeg.exe
+    
+    3.Соберите проект с помощью Maven
+    
+    mvn clean package
